@@ -19,7 +19,7 @@ PRODUCT_PACKAGES += \
 
 # Overlay
 PRODUCT_PACKAGES += \
-	MiuiCameraOverlay
+	MiuiCameraOverlayMi9
 
 # Props
 PRODUCT_PRODUCT_PROPERTIES += \
