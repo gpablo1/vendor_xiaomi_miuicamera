@@ -2,35 +2,105 @@ soong_namespace {
 }
 
 android_app_import {
-	name: "MiuiCamera",
+    name: "MiuiCamera",
     overrides: ["Aperture", "Snap", "Camera", "Camera2", "GoogleCameraGo", "GCamGOPrebuilt"],
-	owner: "MiuiCamera",
-	apk: "proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
+    owner: "MiuiCamera",
+    apk: "proprietary/system/priv-app/MiuiCamera/MiuiCamera.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
 }
 
 android_app_import {
-	name: "MiuiExtraPhoto",
-	owner: "MiuiExtraPhoto",
-	apk: "proprietary/system/priv-app/MiuiExtraPhoto/MiuiExtraPhoto.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
+    name: "MiuiExtraPhoto",
+    owner: "MiuiExtraPhoto",
+    apk: "proprietary/system/priv-app/MiuiExtraPhoto/MiuiExtraPhoto.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
 }
 
 android_app_import {
-	name: "MiuiScanner",
-	owner: "MiuiScanner",
-	apk: "proprietary/system/priv-app/MiuiScanner/MiuiScanner.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
+    name: "MiuiScanner",
+    owner: "MiuiScanner",
+    apk: "proprietary/system/priv-app/MiuiScanner/MiuiScanner.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libselection",
+    owner: "MiuiExtraPhoto",
+    srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libselection.so"],
+    prefer: true,
+    strip: { none: true },
+    system_shared_libs: [],
+    multilib: {
+        lib64: {
+            srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libselection.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libwa_refocus_extraphoto",
+    owner: "MiuiExtraPhoto",
+    srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libwa_refocus_extraphoto.so"],
+    prefer: true,
+    strip: { none: true },
+    system_shared_libs: [],
+    multilib: {
+        lib64: {
+            srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libwa_refocus_extraphoto.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libxcrash",
+    owner: "MiuiExtraPhoto",
+    srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libxcrash.so"],
+    prefer: true,
+    strip: { none: true },
+    system_shared_libs: [],
+    multilib: {
+        lib64: {
+            srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libxcrash.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libxcrash_dumper",
+    owner: "MiuiExtraPhoto",
+    srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libxcrash_dumper.so"],
+    prefer: true,
+    strip: { none: true },
+    system_shared_libs: [],
+    multilib: {
+        lib64: {
+            srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libxcrash_dumper.so"],
+        },
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libyuv",
+    owner: "MiuiExtraPhoto",
+    srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libyuv.so"],
+    prefer: true,
+    strip: { none: true },
+    system_shared_libs: [],
+    multilib: {
+        lib64: {
+            srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libyuv.so"],
+        },
+    },
 }
