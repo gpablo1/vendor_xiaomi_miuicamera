@@ -38,7 +38,6 @@ android_app_import {
 cc_prebuilt_library_shared {
     name: "libselection",
     owner: "MiuiExtraPhoto",
-    srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libselection.so"],
     prefer: true,
     strip: { none: true },
     system_shared_libs: [],
@@ -52,7 +51,6 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libwa_refocus_extraphoto",
     owner: "MiuiExtraPhoto",
-    srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libwa_refocus_extraphoto.so"],
     prefer: true,
     strip: { none: true },
     system_shared_libs: [],
@@ -66,7 +64,6 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libxcrash",
     owner: "MiuiExtraPhoto",
-    srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libxcrash.so"],
     prefer: true,
     strip: { none: true },
     system_shared_libs: [],
@@ -80,7 +77,6 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libxcrash_dumper",
     owner: "MiuiExtraPhoto",
-    srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libxcrash_dumper.so"],
     prefer: true,
     strip: { none: true },
     system_shared_libs: [],
@@ -94,7 +90,6 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
     name: "libyuv",
     owner: "MiuiExtraPhoto",
-    srcs: ["proprietary/system/priv-app/MiuiExtraPhoto/lib/arm64/libyuv.so"],
     prefer: true,
     strip: { none: true },
     system_shared_libs: [],
